@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+    <!-- here is the stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="background-color: turquoise; border: none; border-radius: 5px; color: white; padding: 15px 32px" href="index.html">Latitude</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <button style="background-color: turquoise; border: none; border-radius: 5px; color: white; padding: 15px 32px">Example button</button> -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="visualizations/lat_temp.html">Latitude vs. Max Temperature</a></li>
+                <li><a class="dropdown-item" href="visualizations/lat_humidity.html">Latitude vs. Humidity</a></li>
+                <li><a class="dropdown-item" href="visualizations/lat_cloudiness.html">Latitude vs. Cloudiness</a></li>
+                <li><a class="dropdown-item" href="visualizations/lat_wind.html">Latitude vs. Wind Speed</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="visualizations/comparison.html">Comparison</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visualizations/data.html">Data</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1 class="purple small-font">Summary: Latitude VS. X</h1>
+    <!-- <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css"> -->
+    <div class="container description">
+      <div class="row">
+          <!--Left Box-->
+          <div class="col-lg-7 col-sm-12">
+              <div class="box">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img id=image src="assets/images/Fig1.png" class="rounded float-left indexpic col-md-4  mb-3 ms-md-3" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img id=image src="assets/images/Fig2.png" class="rounded float-left indexpic col-md-4  mb-3 ms-md-3" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img id=image src="assets/images/Fig3.png" class="rounded float-left indexpic col-md-4  mb-3 ms-md-3" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img id=image src="assets/images/Fig4.png" class="rounded float-left indexpic col-md-4  mb-3 ms-md-3" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                  <p>The purpose of this project was to analyze how weather changes as
+                    approaching the equator.
+                    To accomplish this analysis, the data was retrieved from the OpenWeather API to assemble a
+                    dataset on over 500 cities.</p>
+                  <p>After assembling the dataset, applying Matplotlib to plot various aspects between the weather factors and latitude. Factors included: temperature (F), cloudiness (%), wind speed (mph), and humidity (%).
+                    This site provides the source data and visualizations created as part of the analysis, as well
+                    as explanations and descriptions of any trends and correlations witnessed.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <div class="box visualbox">
+                    <h3>Visualizations</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-3">
+                            <a href="visualizations/lat_temp.html">
+                                <img src="assets/images/Fig1.png" class="rounded visualpic"
+                                    alt="Max Temp vs Latitude" title="Max Temperature">
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-sm-3">
+                            <a href="visualizations/lat_humidity.html">
+                                <img src="assets/images/Fig2.png" class="rounded visualpic"
+                                    alt="Humidity vs Latitude" title="Humidity">
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-sm-3">
+                            <a href="visualizations/lat_cloudiness.html">
+                                <img src="assets/images/Fig3.png" class="rounded visualpic"
+                                    alt="Cloudiness vs Latitude" title="Cloudiness">
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-sm-3">
+                            <a href="visualizations/lat_wind.html">
+                                <img src="assets/images/Fig4.png" class="rounded visualpic"
+                                    alt="wind_spd vs Latitude" title="Wind Speed">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class="footer">
+          &copy; <a target="_blank" href="https://yuanphone.github.io/">Yuanfeng Xu</a>
+          &#x2709; <a>xuyuanphone@gmail.com</a>
+      </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
